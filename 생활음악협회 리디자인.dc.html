@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@300;400;500;600;700;800;900&family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700;800&family=Newsreader:ital,opsz,wght@1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+*{ box-sizing:border-box; }
+body{ margin:0; }
+</style>
+</helmet>
+
+<div style="position:absolute; left:0px; top:0px; width:1392px; font-family:'Pretendard',sans-serif;">
+  <div data-drags-parent="1" style="display:inline-block; font-size:12px; font-weight:800; letter-spacing:.22em; color:#6B6F76; text-transform:uppercase; cursor:grab;">Redesign Study · 2026</div>
+  <h1 style="margin:12px 0 8px; font-size:40px; line-height:1.05; font-weight:800; letter-spacing:-.02em; color:#1d2024;">한국생활음악강사협회 모바일 앱 · 리디자인 시안</h1>
+  <p style="margin:0; font-size:16px; line-height:1.55; color:#565a61; max-width:760px;">기관 수업에 특화된 생활음악 교육 협회 앱을, 같은 콘텐츠로 <strong style="color:#1d2024;">3가지 시각 방향</strong>으로 탐색했습니다. 각 방향을 <strong style="color:#1d2024;">홈 · 클래스</strong> 두 화면으로 비교해 보세요.</p>
+</div>
+
+<div style="position:absolute; left:0px; top:150px; width:384px; font-family:'Pretendard',sans-serif;">
+  <div data-drags-parent="1" style="font-size:12px; font-weight:800; letter-spacing:.2em; color:#9a6a52; cursor:grab;">방향 A</div>
+  <h2 style="margin:8px 0 7px; font-size:25px; font-weight:800; letter-spacing:-.01em; color:#1d2024;">에디토리얼 · 아카이브</h2>
+  <p style="margin:0 0 13px; font-size:14px; line-height:1.55; color:#5e636b;">세리프 제목과 헤어라인, 넉넉한 여백으로 매거진처럼 신뢰감 있는 톤.</p>
+  <div style="display:flex; gap:7px;">
+    <span style="width:22px; height:22px; border-radius:6px; background:#1C1814;"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#BB5A3C;"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#15756A;"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#F0E8D8; border:1px solid #d9cdb5;"></span>
+  </div>
+</div>
+
+<div style="position:absolute; left:504px; top:150px; width:384px; font-family:'Pretendard',sans-serif;">
+  <div data-drags-parent="1" style="font-size:12px; font-weight:800; letter-spacing:.2em; color:#e0593f; cursor:grab;">방향 B</div>
+  <h2 style="margin:8px 0 7px; font-size:25px; font-weight:800; letter-spacing:-.01em; color:#1d2024;">리듬 · 팝</h2>
+  <p style="margin:0 0 13px; font-size:14px; line-height:1.55; color:#5e636b;">선명한 색면과 굵은 타이포, 스티커 그림자로 음악의 활기를 표현.</p>
+  <div style="display:flex; gap:7px;">
+    <span style="width:22px; height:22px; border-radius:6px; background:#FF5A4D;"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#FFB22E;"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#12A594;"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#8C5BD8;"></span>
+  </div>
+</div>
+
+<div style="position:absolute; left:1008px; top:150px; width:384px; font-family:'Pretendard',sans-serif;">
+  <div data-drags-parent="1" style="font-size:12px; font-weight:800; letter-spacing:.2em; color:#6f8d80; cursor:grab;">방향 C</div>
+  <h2 style="margin:8px 0 7px; font-size:25px; font-weight:800; letter-spacing:-.01em; color:#1d2024;">캄 스튜디오 · 소프트</h2>
+  <p style="margin:0 0 13px; font-size:14px; line-height:1.55; color:#5e636b;">세이지 톤과 가벼운 서체, 충분한 여백으로 차분하고 고급스럽게.</p>
+  <div style="display:flex; gap:7px;">
+    <span style="width:22px; height:22px; border-radius:6px; background:#88A99B;"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#33473F;"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#E3B294;"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#EDEFE9; border:1px solid #d7dbd2;"></span>
+  </div>
+</div>
+
+<!-- ===================== A · HOME ===================== -->
+<div style="position:absolute; left:0px; top:300px; width:384px; font-family:'Gothic A1',sans-serif;">
+  <div data-drags-parent="1" style="font-size:12px; font-weight:800; color:#6B6F76; margin-bottom:10px; cursor:grab; font-family:'Pretendard',sans-serif;">홈 · Home</div>
+  <div style="width:384px; height:828px; background:#0b0b0d; border-radius:54px; padding:13px; box-shadow:0 30px 70px -28px rgba(28,24,20,.55), 0 1px 0 rgba(255,255,255,.08) inset;">
+    <div style="position:relative; width:358px; height:802px; background:#F2EADB; border-radius:41px; overflow:hidden;">
+      <div style="position:absolute; top:11px; left:50%; transform:translateX(-50%); width:104px; height:30px; background:#0b0b0d; border-radius:16px; z-index:60;"></div>
+      <div style="position:absolute; top:0; left:0; right:0; height:50px; display:flex; align-items:flex-end; justify-content:space-between; padding:0 24px 9px; z-index:40; color:#1C1814;">
+        <span style="font-size:14px; font-weight:800;">9:41</span>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <svg width="17" height="11" viewBox="0 0 17 11" fill="#1C1814"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.7" y="5" width="3" height="6" rx="1"/><rect x="9.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="14" y="0" width="3" height="11" rx="1"/></svg>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="#1C1814"><path d="M8 2.4c2.6 0 5 1 6.8 2.8l-1.5 1.5C12 5.3 10.1 4.5 8 4.5S4 5.3 2.7 6.7L1.2 5.2C3 3.4 5.4 2.4 8 2.4z"/><path d="M8 6.3c1.5 0 2.9.6 4 1.7l-1.6 1.5C9.9 8.9 9 8.5 8 8.5s-1.9.4-2.4 1L4 8c1.1-1.1 2.5-1.7 4-1.7z"/><circle cx="8" cy="10.5" r="1.3"/></svg>
+          <div style="display:flex; align-items:center; gap:2px;"><div style="width:22px; height:11px; border:1.4px solid #1C1814; border-radius:3px; padding:1.4px;"><div style="width:72%; height:100%; background:#1C1814; border-radius:1px;"></div></div><div style="width:1.6px; height:4px; background:#1C1814; border-radius:1px; opacity:.6;"></div></div>
+        </div>
+      </div>
+      <div style="position:absolute; top:50px; left:0; right:0; bottom:64px; overflow:hidden;">
+        <div style="padding:8px 22px 13px; border-bottom:1px solid rgba(28,24,20,.14); display:flex; align-items:center; gap:11px;">
+          <div style="width:38px; height:38px; border:1.4px solid #1C1814; display:flex; align-items:center; justify-content:center; font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:15px; color:#1C1814;">LM</div>
+          <div style="flex:1;">
+            <div style="font-family:'Newsreader',serif; font-style:italic; font-size:11.5px; color:#9a6a52; line-height:1;">Life Music Lecturer Assoc.</div>
+            <div style="font-size:14px; font-weight:800; color:#1C1814; letter-spacing:-.01em; margin-top:3px;">한국생활음악강사협회</div>
+          </div>
+          <div style="font-family:'Nanum Myeongjo',serif; font-size:11px; color:#8A8175; letter-spacing:.12em;">EST.</div>
+        </div>
+        <div style="padding:20px 22px 18px;">
+          <div style="font-family:'Newsreader',serif; font-style:italic; font-size:14px; color:#BB5A3C;">Become a Lecturer —</div>
+          <h2 style="margin:9px 0 0; font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:29px; line-height:1.25; color:#1C1814; letter-spacing:-.01em;">기관 수업에 특화된<br>생활음악 교육 협회</h2>
+          <div style="width:44px; height:2px; background:#BB5A3C; margin:16px 0 13px;"></div>
+          <p style="margin:0; font-size:13.5px; line-height:1.62; color:#6f675c;">실력과 교수법을 겸비한 전문강사 양성. 커리큘럼·자격과정·교재·연습곡집·수업용 PPT를 연구·개발합니다.</p>
+          <div style="display:flex; align-items:center; gap:13px; margin-top:18px;">
+            <a style="display:inline-flex; align-items:center; gap:8px; background:#1C1814; color:#F2EADB; font-size:13px; font-weight:700; padding:12px 18px; text-decoration:none;">자격과정 문의 <span style="font-family:'Nanum Myeongjo',serif;">→</span></a>
+            <span style="font-family:'Nanum Myeongjo',serif; font-size:12px; color:#8A8175;">010-5655-9152</span>
+          </div>
+        </div>
+        <div style="padding:4px 22px 0;">
+          <div style="display:flex; align-items:baseline; gap:10px; padding-bottom:9px;">
+            <span style="font-size:13px; font-weight:800; color:#1C1814; letter-spacing:.04em;">자격과정</span>
+            <span style="font-family:'Newsreader',serif; font-style:italic; font-size:12px; color:#9a9082;">Courses</span>
+            <span style="flex:1; height:1px; background:rgba(28,24,20,.16);"></span>
+            <span style="font-family:'Nanum Myeongjo',serif; font-size:12px; color:#8A8175;">04</span>
+          </div>
+          <a style="display:flex; align-items:center; gap:14px; padding:14px 0; border-top:1px solid rgba(28,24,20,.12); text-decoration:none;">
+            <span style="font-family:'Nanum Myeongjo',serif; font-size:21px; font-weight:700; color:#BB5A3C; width:26px;">01</span>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:800; color:#1C1814;">급수별 자격과정</span><span style="display:block; font-size:12px; color:#8A8175; margin-top:3px;">1급~3급 단계별 실기·교수법</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1C1814" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a style="display:flex; align-items:center; gap:14px; padding:14px 0; border-top:1px solid rgba(28,24,20,.12); text-decoration:none;">
+            <span style="font-family:'Nanum Myeongjo',serif; font-size:21px; font-weight:700; color:#BB5A3C; width:26px;">02</span>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:800; color:#1C1814;">자격 과정별 속성과정</span><span style="display:block; font-size:12px; color:#8A8175; margin-top:3px;">단기 집중 핵심 과정</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1C1814" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a style="display:flex; align-items:center; gap:14px; padding:14px 0; border-top:1px solid rgba(28,24,20,.12); text-decoration:none;">
+            <span style="font-family:'Nanum Myeongjo',serif; font-size:21px; font-weight:700; color:#BB5A3C; width:26px;">03</span>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:800; color:#1C1814;">카테고리별 융합수업</span><span style="display:block; font-size:12px; color:#8A8175; margin-top:3px;">여러 악기를 묶은 기관 맞춤 설계</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1C1814" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div style="position:absolute; left:0; right:0; bottom:0; height:64px; background:#F7F0E2; border-top:1px solid rgba(28,24,20,.12); display:flex; align-items:flex-start; justify-content:space-around; padding-top:9px; z-index:30;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#BB5A3C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span style="font-size:9.5px; font-weight:800; color:#BB5A3C;">홈</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#a79c8b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 22l4-2.4L16 22l-1-8.5"/></svg><span style="font-size:9.5px; font-weight:700; color:#a79c8b;">자격과정</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#a79c8b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M9 18V6l11-2v12"/></svg><span style="font-size:9.5px; font-weight:700; color:#a79c8b;">클래스</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#a79c8b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h11a2 2 0 0 1 2 2V21H7a2 2 0 0 1-2-2V4.5z"/><path d="M18 8H8.5"/></svg><span style="font-size:9.5px; font-weight:700; color:#a79c8b;">교재</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#a79c8b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span style="font-size:9.5px; font-weight:700; color:#a79c8b;">더보기</span></div>
+      </div>
+      <div style="position:absolute; bottom:7px; left:50%; transform:translateX(-50%); width:132px; height:5px; border-radius:3px; background:rgba(28,24,20,.3); z-index:50;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== A · CLASSES ===================== -->
+<div style="position:absolute; left:0px; top:1240px; width:384px; font-family:'Gothic A1',sans-serif;">
+  <div data-drags-parent="1" style="font-size:12px; font-weight:800; color:#6B6F76; margin-bottom:10px; cursor:grab; font-family:'Pretendard',sans-serif;">클래스 · Class</div>
+  <div style="width:384px; height:828px; background:#0b0b0d; border-radius:54px; padding:13px; box-shadow:0 30px 70px -28px rgba(28,24,20,.55), 0 1px 0 rgba(255,255,255,.08) inset;">
+    <div style="position:relative; width:358px; height:802px; background:#F2EADB; border-radius:41px; overflow:hidden;">
+      <div style="position:absolute; top:11px; left:50%; transform:translateX(-50%); width:104px; height:30px; background:#0b0b0d; border-radius:16px; z-index:60;"></div>
+      <div style="position:absolute; top:0; left:0; right:0; height:50px; display:flex; align-items:flex-end; justify-content:space-between; padding:0 24px 9px; z-index:40; color:#1C1814;">
+        <span style="font-size:14px; font-weight:800;">9:41</span>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <svg width="17" height="11" viewBox="0 0 17 11" fill="#1C1814"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.7" y="5" width="3" height="6" rx="1"/><rect x="9.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="14" y="0" width="3" height="11" rx="1"/></svg>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="#1C1814"><path d="M8 2.4c2.6 0 5 1 6.8 2.8l-1.5 1.5C12 5.3 10.1 4.5 8 4.5S4 5.3 2.7 6.7L1.2 5.2C3 3.4 5.4 2.4 8 2.4z"/><path d="M8 6.3c1.5 0 2.9.6 4 1.7l-1.6 1.5C9.9 8.9 9 8.5 8 8.5s-1.9.4-2.4 1L4 8c1.1-1.1 2.5-1.7 4-1.7z"/><circle cx="8" cy="10.5" r="1.3"/></svg>
+          <div style="display:flex; align-items:center; gap:2px;"><div style="width:22px; height:11px; border:1.4px solid #1C1814; border-radius:3px; padding:1.4px;"><div style="width:72%; height:100%; background:#1C1814; border-radius:1px;"></div></div><div style="width:1.6px; height:4px; background:#1C1814; border-radius:1px; opacity:.6;"></div></div>
+        </div>
+      </div>
+      <div style="position:absolute; top:50px; left:0; right:0; bottom:64px; overflow:hidden;">
+        <div style="padding:8px 22px 13px; border-bottom:1px solid rgba(28,24,20,.14); display:flex; align-items:center; gap:11px;">
+          <div style="width:34px; height:34px; border:1.4px solid #1C1814; display:flex; align-items:center; justify-content:center; font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:13px; color:#1C1814;">LM</div>
+          <div style="flex:1;">
+            <div style="font-family:'Newsreader',serif; font-style:italic; font-size:11.5px; color:#9a6a52; line-height:1;">Class</div>
+            <div style="font-size:15px; font-weight:800; color:#1C1814; margin-top:2px;">클래스</div>
+          </div>
+          <span style="font-family:'Nanum Myeongjo',serif; font-size:12px; color:#8A8175;">24 과목</span>
+        </div>
+        <div style="padding:18px 22px 14px;">
+          <h2 style="margin:0; font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:24px; line-height:1.3; color:#1C1814;">계열별 생활음악 수업</h2>
+          <p style="margin:9px 0 0; font-size:13px; line-height:1.6; color:#6f675c;">기관·연령·회차에 맞춰 다양한 악기와 활동을 조합합니다.</p>
+        </div>
+        <div style="display:flex; gap:16px; padding:0 22px 14px; overflow:hidden; white-space:nowrap;">
+          <span style="font-size:13.5px; font-weight:800; color:#1C1814; border-bottom:2px solid #BB5A3C; padding-bottom:5px;">전체</span>
+          <span style="font-size:13.5px; font-weight:600; color:#9a9082; padding-bottom:5px;">현악</span>
+          <span style="font-size:13.5px; font-weight:600; color:#9a9082; padding-bottom:5px;">타악</span>
+          <span style="font-size:13.5px; font-weight:600; color:#9a9082; padding-bottom:5px;">난타·전통</span>
+          <span style="font-size:13.5px; font-weight:600; color:#9a9082; padding-bottom:5px;">가창·보컬</span>
+          <span style="font-size:13.5px; font-weight:600; color:#9a9082; padding-bottom:5px;">밴드·디지털</span>
+        </div>
+        <div style="padding:0 22px;">
+          <a style="display:flex; align-items:center; gap:14px; padding:13px 0; border-top:1px solid rgba(28,24,20,.12); text-decoration:none;">
+            <span style="font-family:'Nanum Myeongjo',serif; font-size:19px; font-weight:700; color:#BB5A3C; width:24px;">01</span>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:800; color:#1C1814;">기타</span><span style="display:block; font-size:12px; color:#8A8175; margin-top:2px;">현악 · 코드 반주 입문 · 합주 확장</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1C1814" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a style="display:flex; align-items:center; gap:14px; padding:13px 0; border-top:1px solid rgba(28,24,20,.12); text-decoration:none;">
+            <span style="font-family:'Nanum Myeongjo',serif; font-size:19px; font-weight:700; color:#BB5A3C; width:24px;">02</span>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:800; color:#1C1814;">우쿨렐레</span><span style="display:block; font-size:12px; color:#8A8175; margin-top:2px;">현악 · 작은 손에도 부담 없음</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1C1814" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a style="display:flex; align-items:center; gap:14px; padding:13px 0; border-top:1px solid rgba(28,24,20,.12); text-decoration:none;">
+            <span style="font-family:'Nanum Myeongjo',serif; font-size:19px; font-weight:700; color:#BB5A3C; width:24px;">03</span>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:800; color:#1C1814;">미니하프</span><span style="display:block; font-size:12px; color:#8A8175; margin-top:2px;">현악 · 맑은 음색 · 정서 안정</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1C1814" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a style="display:flex; align-items:center; gap:14px; padding:13px 0; border-top:1px solid rgba(28,24,20,.12); text-decoration:none;">
+            <span style="font-family:'Nanum Myeongjo',serif; font-size:19px; font-weight:700; color:#BB5A3C; width:24px;">04</span>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:800; color:#1C1814;">칼림바</span><span style="display:block; font-size:12px; color:#8A8175; margin-top:2px;">현악 · 누구나 즉시 소리 · 힐링</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1C1814" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+          <a style="display:flex; align-items:center; gap:14px; padding:13px 0; border-top:1px solid rgba(28,24,20,.12); text-decoration:none;">
+            <span style="font-family:'Nanum Myeongjo',serif; font-size:19px; font-weight:700; color:#BB5A3C; width:24px;">05</span>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:800; color:#1C1814;">난타</span><span style="display:block; font-size:12px; color:#8A8175; margin-top:2px;">난타·전통 · 신나는 합주 · 대규모</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1C1814" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div style="position:absolute; left:0; right:0; bottom:0; height:64px; background:#F7F0E2; border-top:1px solid rgba(28,24,20,.12); display:flex; align-items:flex-start; justify-content:space-around; padding-top:9px; z-index:30;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#a79c8b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span style="font-size:9.5px; font-weight:700; color:#a79c8b;">홈</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#a79c8b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 22l4-2.4L16 22l-1-8.5"/></svg><span style="font-size:9.5px; font-weight:700; color:#a79c8b;">자격과정</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#BB5A3C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M9 18V6l11-2v12"/></svg><span style="font-size:9.5px; font-weight:800; color:#BB5A3C;">클래스</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#a79c8b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h11a2 2 0 0 1 2 2V21H7a2 2 0 0 1-2-2V4.5z"/><path d="M18 8H8.5"/></svg><span style="font-size:9.5px; font-weight:700; color:#a79c8b;">교재</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#a79c8b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span style="font-size:9.5px; font-weight:700; color:#a79c8b;">더보기</span></div>
+      </div>
+      <div style="position:absolute; bottom:7px; left:50%; transform:translateX(-50%); width:132px; height:5px; border-radius:3px; background:rgba(28,24,20,.3); z-index:50;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== B · HOME ===================== -->
+<div style="position:absolute; left:504px; top:300px; width:384px; font-family:'Pretendard',sans-serif;">
+  <div data-drags-parent="1" style="font-size:12px; font-weight:800; color:#6B6F76; margin-bottom:10px; cursor:grab;">홈 · Home</div>
+  <div style="width:384px; height:828px; background:#0b0b0d; border-radius:54px; padding:13px; box-shadow:0 30px 70px -28px rgba(20,16,12,.55), 0 1px 0 rgba(255,255,255,.08) inset;">
+    <div style="position:relative; width:358px; height:802px; background:#FFFCF6; border-radius:41px; overflow:hidden;">
+      <div style="position:absolute; top:11px; left:50%; transform:translateX(-50%); width:104px; height:30px; background:#0b0b0d; border-radius:16px; z-index:60;"></div>
+      <div style="position:absolute; top:0; left:0; right:0; height:50px; display:flex; align-items:flex-end; justify-content:space-between; padding:0 24px 9px; z-index:40; color:#17120F;">
+        <span style="font-size:14px; font-weight:800;">9:41</span>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <svg width="17" height="11" viewBox="0 0 17 11" fill="#17120F"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.7" y="5" width="3" height="6" rx="1"/><rect x="9.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="14" y="0" width="3" height="11" rx="1"/></svg>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="#17120F"><path d="M8 2.4c2.6 0 5 1 6.8 2.8l-1.5 1.5C12 5.3 10.1 4.5 8 4.5S4 5.3 2.7 6.7L1.2 5.2C3 3.4 5.4 2.4 8 2.4z"/><path d="M8 6.3c1.5 0 2.9.6 4 1.7l-1.6 1.5C9.9 8.9 9 8.5 8 8.5s-1.9.4-2.4 1L4 8c1.1-1.1 2.5-1.7 4-1.7z"/><circle cx="8" cy="10.5" r="1.3"/></svg>
+          <div style="display:flex; align-items:center; gap:2px;"><div style="width:22px; height:11px; border:1.4px solid #17120F; border-radius:3px; padding:1.4px;"><div style="width:72%; height:100%; background:#17120F; border-radius:1px;"></div></div><div style="width:1.6px; height:4px; background:#17120F; border-radius:1px; opacity:.6;"></div></div>
+        </div>
+      </div>
+      <div style="position:absolute; top:50px; left:0; right:0; bottom:64px; overflow:hidden;">
+        <div style="display:flex; align-items:center; gap:11px; padding:10px 20px 14px;">
+          <div style="width:40px; height:40px; background:#FF5A4D; border:2px solid #17120F; border-radius:12px; display:flex; align-items:center; justify-content:center; box-shadow:2.5px 2.5px 0 #17120F;"><span style="font-family:'Black Han Sans',sans-serif; font-size:15px; color:#fff;">LM</span></div>
+          <div style="flex:1; font-size:15px; font-weight:800; color:#17120F; letter-spacing:-.02em;">한국생활음악강사협회</div>
+          <div style="width:38px; height:38px; background:#8C5BD8; border:2px solid #17120F; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:17px; box-shadow:2px 2px 0 #17120F;">♪</div>
+        </div>
+        <div style="margin:0 20px; padding:20px 20px 18px; background:#FF5A4D; border:2.5px solid #17120F; border-radius:26px; position:relative; overflow:hidden; box-shadow:5px 5px 0 #17120F;">
+          <span style="position:absolute; right:14px; top:6px; font-family:'Black Han Sans',sans-serif; font-size:62px; color:rgba(255,255,255,.16); line-height:1;">♫</span>
+          <span style="position:absolute; right:64px; bottom:50px; font-family:'Black Han Sans',sans-serif; font-size:30px; color:rgba(255,255,255,.18);">♪</span>
+          <span style="display:inline-block; background:#12A594; color:#fff; font-size:11px; font-weight:800; padding:5px 11px; border-radius:20px; border:2px solid #17120F;">기관 수업 특화</span>
+          <h2 style="margin:13px 0 0; font-family:'Black Han Sans',sans-serif; font-size:32px; line-height:1.12; color:#fff; letter-spacing:.01em; position:relative;">생활음악<br>전문강사 양성</h2>
+          <p style="margin:11px 0 0; font-size:12.5px; line-height:1.5; color:rgba(255,255,255,.92); font-weight:600; max-width:215px;">실력과 교수법을 겸비한 강사를 키우는 협회입니다.</p>
+          <a style="display:inline-flex; align-items:center; gap:7px; margin-top:16px; background:#FFB22E; color:#17120F; font-size:13px; font-weight:800; padding:11px 17px; border:2px solid #17120F; border-radius:14px; text-decoration:none; box-shadow:3px 3px 0 #17120F;">자격과정 문의 →</a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:11px; padding:16px 20px 6px;">
+          <div style="background:#2A6FDB; border:2px solid #17120F; border-radius:18px; padding:13px; box-shadow:3px 3px 0 #17120F; min-height:78px; display:flex; flex-direction:column; justify-content:space-between;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 22l4-2.4L16 22l-1-8.5"/></svg><span style="font-size:15px; font-weight:800; color:#fff;">자격과정</span></div>
+          <div style="background:#12A594; border:2px solid #17120F; border-radius:18px; padding:13px; box-shadow:3px 3px 0 #17120F; min-height:78px; display:flex; flex-direction:column; justify-content:space-between;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M9 18V6l11-2v12"/></svg><span style="font-size:15px; font-weight:800; color:#fff;">클래스</span></div>
+          <div style="background:#FFB22E; border:2px solid #17120F; border-radius:18px; padding:13px; box-shadow:3px 3px 0 #17120F; min-height:78px; display:flex; flex-direction:column; justify-content:space-between;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17120F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h11a2 2 0 0 1 2 2V21H7a2 2 0 0 1-2-2V4.5z"/><path d="M18 8H8.5"/></svg><span style="font-size:15px; font-weight:800; color:#17120F;">교재</span></div>
+          <div style="background:#8C5BD8; border:2px solid #17120F; border-radius:18px; padding:13px; box-shadow:3px 3px 0 #17120F; min-height:78px; display:flex; flex-direction:column; justify-content:space-between;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-7h6v7"/></svg><span style="font-size:15px; font-weight:800; color:#fff;">기관수업</span></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:9px; padding:12px 20px 9px;">
+          <span style="font-family:'Black Han Sans',sans-serif; font-size:19px; color:#17120F;">자격과정</span>
+          <span style="background:#17120F; color:#fff; font-size:11px; font-weight:800; padding:4px 9px; border-radius:20px;">4 과정</span>
+        </div>
+        <div style="padding:0 20px;">
+          <div style="display:flex; align-items:center; gap:13px; background:#fff; border:2px solid #17120F; border-radius:18px; padding:14px; box-shadow:3px 3px 0 #2A6FDB;">
+            <span style="font-family:'Black Han Sans',sans-serif; font-size:26px; color:#2A6FDB; width:34px; text-align:center;">01</span>
+            <span style="flex:1;"><span style="display:block; font-size:16px; font-weight:800; color:#17120F;">급수별 자격과정</span><span style="display:block; font-size:12px; color:#6f675c; font-weight:600; margin-top:2px;">1급~3급 단계별 실기·교수법</span></span>
+            <span style="font-size:18px; color:#17120F;">→</span>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute; left:0; right:0; bottom:0; height:64px; background:#fff; border-top:1.5px solid #17120F; display:flex; align-items:flex-start; justify-content:space-around; padding-top:9px; z-index:30;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#FF5A4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span style="font-size:9.5px; font-weight:800; color:#FF5A4D;">홈</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b9b2a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 22l4-2.4L16 22l-1-8.5"/></svg><span style="font-size:9.5px; font-weight:700; color:#b9b2a8;">자격과정</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b9b2a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M9 18V6l11-2v12"/></svg><span style="font-size:9.5px; font-weight:700; color:#b9b2a8;">클래스</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b9b2a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h11a2 2 0 0 1 2 2V21H7a2 2 0 0 1-2-2V4.5z"/><path d="M18 8H8.5"/></svg><span style="font-size:9.5px; font-weight:700; color:#b9b2a8;">교재</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b9b2a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span style="font-size:9.5px; font-weight:700; color:#b9b2a8;">더보기</span></div>
+      </div>
+      <div style="position:absolute; bottom:7px; left:50%; transform:translateX(-50%); width:132px; height:5px; border-radius:3px; background:rgba(23,18,15,.32); z-index:50;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== B · CLASSES ===================== -->
+<div style="position:absolute; left:504px; top:1240px; width:384px; font-family:'Pretendard',sans-serif;">
+  <div data-drags-parent="1" style="font-size:12px; font-weight:800; color:#6B6F76; margin-bottom:10px; cursor:grab;">클래스 · Class</div>
+  <div style="width:384px; height:828px; background:#0b0b0d; border-radius:54px; padding:13px; box-shadow:0 30px 70px -28px rgba(20,16,12,.55), 0 1px 0 rgba(255,255,255,.08) inset;">
+    <div style="position:relative; width:358px; height:802px; background:#FFFCF6; border-radius:41px; overflow:hidden;">
+      <div style="position:absolute; top:11px; left:50%; transform:translateX(-50%); width:104px; height:30px; background:#0b0b0d; border-radius:16px; z-index:60;"></div>
+      <div style="position:absolute; top:0; left:0; right:0; height:50px; display:flex; align-items:flex-end; justify-content:space-between; padding:0 24px 9px; z-index:40; color:#17120F;">
+        <span style="font-size:14px; font-weight:800;">9:41</span>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <svg width="17" height="11" viewBox="0 0 17 11" fill="#17120F"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.7" y="5" width="3" height="6" rx="1"/><rect x="9.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="14" y="0" width="3" height="11" rx="1"/></svg>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="#17120F"><path d="M8 2.4c2.6 0 5 1 6.8 2.8l-1.5 1.5C12 5.3 10.1 4.5 8 4.5S4 5.3 2.7 6.7L1.2 5.2C3 3.4 5.4 2.4 8 2.4z"/><path d="M8 6.3c1.5 0 2.9.6 4 1.7l-1.6 1.5C9.9 8.9 9 8.5 8 8.5s-1.9.4-2.4 1L4 8c1.1-1.1 2.5-1.7 4-1.7z"/><circle cx="8" cy="10.5" r="1.3"/></svg>
+          <div style="display:flex; align-items:center; gap:2px;"><div style="width:22px; height:11px; border:1.4px solid #17120F; border-radius:3px; padding:1.4px;"><div style="width:72%; height:100%; background:#17120F; border-radius:1px;"></div></div><div style="width:1.6px; height:4px; background:#17120F; border-radius:1px; opacity:.6;"></div></div>
+        </div>
+      </div>
+      <div style="position:absolute; top:50px; left:0; right:0; bottom:64px; overflow:hidden;">
+        <div style="display:flex; align-items:center; gap:11px; padding:10px 20px 12px;">
+          <div style="width:38px; height:38px; background:#FF5A4D; border:2px solid #17120F; border-radius:11px; display:flex; align-items:center; justify-content:center; box-shadow:2.5px 2.5px 0 #17120F;"><span style="font-family:'Black Han Sans',sans-serif; font-size:14px; color:#fff;">LM</span></div>
+          <div style="flex:1; font-family:'Black Han Sans',sans-serif; font-size:23px; color:#17120F;">클래스</div>
+          <div style="width:36px; height:36px; background:#8C5BD8; border:2px solid #17120F; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; box-shadow:2px 2px 0 #17120F;">♪</div>
+        </div>
+        <p style="margin:0; padding:0 20px 14px; font-size:13px; line-height:1.5; color:#6f675c; font-weight:600;">기관·연령·회차에 맞춰 다양한 악기와 활동을 조합합니다.</p>
+        <div style="display:flex; gap:12px; padding:0 20px 16px; overflow:hidden;">
+          <div style="width:150px; background:#12A594; border:2px solid #17120F; border-radius:20px; padding:14px; box-shadow:3px 3px 0 #17120F; flex-shrink:0; position:relative;">
+            <div style="width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,.9); border:2px solid #17120F; display:flex; align-items:center; justify-content:center; font-size:25px; color:#17120F;">♪</div>
+            <span style="position:absolute; top:12px; right:12px; background:#fff; border:2px solid #17120F; color:#17120F; font-size:10px; font-weight:800; padding:3px 7px; border-radius:11px;">NEW</span>
+            <div style="margin-top:13px; font-size:16px; font-weight:800; color:#fff;">디지털 합주</div>
+          </div>
+          <div style="width:150px; background:#FF5A4D; border:2px solid #17120F; border-radius:20px; padding:14px; box-shadow:3px 3px 0 #17120F; flex-shrink:0; position:relative;">
+            <div style="width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,.9); border:2px solid #17120F; display:flex; align-items:center; justify-content:center; font-size:25px; color:#17120F;">♫</div>
+            <span style="position:absolute; top:12px; right:12px; background:#fff; border:2px solid #17120F; color:#17120F; font-size:10px; font-weight:800; padding:3px 7px; border-radius:11px;">인기</span>
+            <div style="margin-top:13px; font-size:16px; font-weight:800; color:#fff;">스푼난타</div>
+          </div>
+          <div style="width:150px; background:#FFB22E; border:2px solid #17120F; border-radius:20px; padding:14px; box-shadow:3px 3px 0 #17120F; flex-shrink:0; position:relative;">
+            <div style="width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,.9); border:2px solid #17120F; display:flex; align-items:center; justify-content:center; font-size:25px; color:#17120F;">♬</div>
+            <span style="position:absolute; top:12px; right:12px; background:#17120F; color:#fff; font-size:10px; font-weight:800; padding:3px 7px; border-radius:11px;">추천</span>
+            <div style="margin-top:13px; font-size:16px; font-weight:800; color:#17120F;">소고난타</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:8px; padding:0 20px 14px; overflow:hidden;">
+          <span style="background:#17120F; color:#fff; font-size:13px; font-weight:800; padding:8px 14px; border-radius:20px;">전체</span>
+          <span style="background:#fff; border:2px solid #17120F; color:#17120F; font-size:13px; font-weight:700; padding:7px 13px; border-radius:20px;">현악</span>
+          <span style="background:#fff; border:2px solid #17120F; color:#17120F; font-size:13px; font-weight:700; padding:7px 13px; border-radius:20px;">타악</span>
+          <span style="background:#fff; border:2px solid #17120F; color:#17120F; font-size:13px; font-weight:700; padding:7px 13px; border-radius:20px;">난타·전통</span>
+          <span style="background:#fff; border:2px solid #17120F; color:#17120F; font-size:13px; font-weight:700; padding:7px 13px; border-radius:20px;">가창</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:11px; padding:0 20px;">
+          <div style="display:flex; align-items:center; gap:13px; background:#fff; border:2px solid #17120F; border-radius:18px; padding:12px; box-shadow:3px 3px 0 #12A594;">
+            <div style="width:46px; height:46px; border-radius:13px; background:#CFEDE8; border:2px solid #17120F; display:flex; align-items:center; justify-content:center; font-size:22px; color:#17120F;">♪</div>
+            <span style="flex:1;"><span style="display:block; font-size:16px; font-weight:800; color:#17120F;">기타</span><span style="display:block; font-size:12px; color:#12A594; font-weight:700; margin-top:1px;">현악</span></span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17120F" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div style="display:flex; align-items:center; gap:13px; background:#fff; border:2px solid #17120F; border-radius:18px; padding:12px; box-shadow:3px 3px 0 #FF5A4D;">
+            <div style="width:46px; height:46px; border-radius:13px; background:#FFD9D4; border:2px solid #17120F; display:flex; align-items:center; justify-content:center; font-size:22px; color:#17120F;">♫</div>
+            <span style="flex:1;"><span style="display:block; font-size:16px; font-weight:800; color:#17120F;">드럼</span><span style="display:block; font-size:12px; color:#FF5A4D; font-weight:700; margin-top:1px;">타악</span></span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17120F" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div style="display:flex; align-items:center; gap:13px; background:#fff; border:2px solid #17120F; border-radius:18px; padding:12px; box-shadow:3px 3px 0 #FFB22E;">
+            <div style="width:46px; height:46px; border-radius:13px; background:#FFE5C2; border:2px solid #17120F; display:flex; align-items:center; justify-content:center; font-size:22px; color:#17120F;">♬</div>
+            <span style="flex:1;"><span style="display:block; font-size:16px; font-weight:800; color:#17120F;">난타</span><span style="display:block; font-size:12px; color:#E08A1E; font-weight:700; margin-top:1px;">난타·전통</span></span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17120F" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute; left:0; right:0; bottom:0; height:64px; background:#fff; border-top:1.5px solid #17120F; display:flex; align-items:flex-start; justify-content:space-around; padding-top:9px; z-index:30;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b9b2a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span style="font-size:9.5px; font-weight:700; color:#b9b2a8;">홈</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b9b2a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 22l4-2.4L16 22l-1-8.5"/></svg><span style="font-size:9.5px; font-weight:700; color:#b9b2a8;">자격과정</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#FF5A4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M9 18V6l11-2v12"/></svg><span style="font-size:9.5px; font-weight:800; color:#FF5A4D;">클래스</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b9b2a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h11a2 2 0 0 1 2 2V21H7a2 2 0 0 1-2-2V4.5z"/><path d="M18 8H8.5"/></svg><span style="font-size:9.5px; font-weight:700; color:#b9b2a8;">교재</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#b9b2a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span style="font-size:9.5px; font-weight:700; color:#b9b2a8;">더보기</span></div>
+      </div>
+      <div style="position:absolute; bottom:7px; left:50%; transform:translateX(-50%); width:132px; height:5px; border-radius:3px; background:rgba(23,18,15,.32); z-index:50;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== C · HOME ===================== -->
+<div style="position:absolute; left:1008px; top:300px; width:384px; font-family:'Pretendard',sans-serif;">
+  <div data-drags-parent="1" style="font-size:12px; font-weight:800; color:#6B6F76; margin-bottom:10px; cursor:grab;">홈 · Home</div>
+  <div style="width:384px; height:828px; background:#0b0b0d; border-radius:54px; padding:13px; box-shadow:0 30px 70px -28px rgba(51,71,63,.5), 0 1px 0 rgba(255,255,255,.08) inset;">
+    <div style="position:relative; width:358px; height:802px; background:#FAF9F5; border-radius:41px; overflow:hidden;">
+      <div style="position:absolute; top:11px; left:50%; transform:translateX(-50%); width:104px; height:30px; background:#0b0b0d; border-radius:16px; z-index:60;"></div>
+      <div style="position:absolute; top:0; left:0; right:0; height:50px; display:flex; align-items:flex-end; justify-content:space-between; padding:0 24px 9px; z-index:40; color:#33473F;">
+        <span style="font-size:14px; font-weight:700;">9:41</span>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <svg width="17" height="11" viewBox="0 0 17 11" fill="#33473F"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.7" y="5" width="3" height="6" rx="1"/><rect x="9.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="14" y="0" width="3" height="11" rx="1"/></svg>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="#33473F"><path d="M8 2.4c2.6 0 5 1 6.8 2.8l-1.5 1.5C12 5.3 10.1 4.5 8 4.5S4 5.3 2.7 6.7L1.2 5.2C3 3.4 5.4 2.4 8 2.4z"/><path d="M8 6.3c1.5 0 2.9.6 4 1.7l-1.6 1.5C9.9 8.9 9 8.5 8 8.5s-1.9.4-2.4 1L4 8c1.1-1.1 2.5-1.7 4-1.7z"/><circle cx="8" cy="10.5" r="1.3"/></svg>
+          <div style="display:flex; align-items:center; gap:2px;"><div style="width:22px; height:11px; border:1.4px solid #33473F; border-radius:3px; padding:1.4px;"><div style="width:72%; height:100%; background:#33473F; border-radius:1px;"></div></div><div style="width:1.6px; height:4px; background:#33473F; border-radius:1px; opacity:.6;"></div></div>
+        </div>
+      </div>
+      <div style="position:absolute; top:50px; left:0; right:0; bottom:64px; overflow:hidden;">
+        <div style="display:flex; align-items:center; gap:11px; padding:14px 22px 16px;">
+          <div style="width:36px; height:36px; border-radius:50%; border:1.3px solid #5E8274; display:flex; align-items:center; justify-content:center; font-family:'Gowun Dodum',sans-serif; font-size:13px; color:#5E8274;">LM</div>
+          <div style="flex:1; font-size:14px; font-weight:500; color:#33473F; letter-spacing:-.01em;">한국생활음악강사협회</div>
+          <div style="width:34px; height:34px; border-radius:50%; background:#EFF2ED; display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5E8274" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></div>
+        </div>
+        <div style="margin:0 22px; padding:24px 22px 22px; background:#88A99B; border-radius:28px; position:relative; overflow:hidden;">
+          <div style="position:absolute; right:-30px; top:-30px; width:130px; height:130px; border-radius:50%; border:1.5px solid rgba(250,249,245,.28);"></div>
+          <div style="position:absolute; right:6px; top:6px; width:62px; height:62px; border-radius:50%; border:1.5px solid rgba(250,249,245,.22);"></div>
+          <div style="font-size:12px; font-weight:600; color:#FAF9F5; letter-spacing:.04em; opacity:.92;">생활음악 교육 협회</div>
+          <h2 style="margin:12px 0 0; font-family:'Gowun Dodum',sans-serif; font-size:28px; line-height:1.36; color:#FAF9F5; letter-spacing:-.01em;">기관 수업에<br>특화된 음악 수업</h2>
+          <p style="margin:13px 0 0; font-size:12.5px; line-height:1.65; color:rgba(250,249,245,.88); max-width:210px;">실력과 교수법을 겸비한 전문강사를 차분히 키워갑니다.</p>
+          <a style="display:inline-flex; align-items:center; gap:7px; margin-top:18px; background:#FAF9F5; color:#33473F; font-size:13px; font-weight:600; padding:11px 18px; border-radius:999px; text-decoration:none;">자격과정 문의 <span style="color:#5E8274;">→</span></a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; padding:18px 22px 8px;">
+          <div style="background:#fff; border:1px solid rgba(51,71,63,.08); border-radius:20px; padding:15px; box-shadow:0 6px 18px rgba(51,71,63,.05);"><div style="width:40px; height:40px; border-radius:50%; background:#EAF1ED; display:flex; align-items:center; justify-content:center; margin-bottom:11px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E8274" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 22l4-2.4L16 22l-1-8.5"/></svg></div><span style="font-size:14.5px; font-weight:600; color:#33473F;">자격과정</span></div>
+          <div style="background:#fff; border:1px solid rgba(51,71,63,.08); border-radius:20px; padding:15px; box-shadow:0 6px 18px rgba(51,71,63,.05);"><div style="width:40px; height:40px; border-radius:50%; background:#EAF1ED; display:flex; align-items:center; justify-content:center; margin-bottom:11px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E8274" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M9 18V6l11-2v12"/></svg></div><span style="font-size:14.5px; font-weight:600; color:#33473F;">클래스</span></div>
+          <div style="background:#fff; border:1px solid rgba(51,71,63,.08); border-radius:20px; padding:15px; box-shadow:0 6px 18px rgba(51,71,63,.05);"><div style="width:40px; height:40px; border-radius:50%; background:#F6EBE0; display:flex; align-items:center; justify-content:center; margin-bottom:11px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C18A5E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h11a2 2 0 0 1 2 2V21H7a2 2 0 0 1-2-2V4.5z"/><path d="M18 8H8.5"/></svg></div><span style="font-size:14.5px; font-weight:600; color:#33473F;">교재</span></div>
+          <div style="background:#fff; border:1px solid rgba(51,71,63,.08); border-radius:20px; padding:15px; box-shadow:0 6px 18px rgba(51,71,63,.05);"><div style="width:40px; height:40px; border-radius:50%; background:#EAF1ED; display:flex; align-items:center; justify-content:center; margin-bottom:11px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E8274" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-7h6v7"/></svg></div><span style="font-size:14.5px; font-weight:600; color:#33473F;">기관수업</span></div>
+        </div>
+        <div style="display:flex; align-items:baseline; justify-content:space-between; padding:14px 22px 4px;">
+          <span style="font-family:'Gowun Dodum',sans-serif; font-size:17px; color:#33473F;">자격과정</span>
+          <span style="font-size:12px; font-weight:500; color:#9A958B;">전체 보기</span>
+        </div>
+        <div style="padding:0 22px;">
+          <div style="display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid rgba(51,71,63,.08);">
+            <span style="font-family:'Gowun Dodum',sans-serif; font-size:15px; color:#88A99B; width:22px;">01</span>
+            <span style="flex:1;"><span style="display:block; font-size:15px; font-weight:600; color:#33473F;">급수별 자격과정</span><span style="display:block; font-size:12px; color:#9A958B; margin-top:3px;">1급~3급 단계별 실기·교수법</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9A958B" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid rgba(51,71,63,.08);">
+            <span style="font-family:'Gowun Dodum',sans-serif; font-size:15px; color:#88A99B; width:22px;">02</span>
+            <span style="flex:1;"><span style="display:block; font-size:15px; font-weight:600; color:#33473F;">자격 과정별 속성과정</span><span style="display:block; font-size:12px; color:#9A958B; margin-top:3px;">단기 집중 핵심 과정</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9A958B" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute; left:0; right:0; bottom:0; height:64px; background:rgba(255,255,255,.92); border-top:1px solid rgba(51,71,63,.08); display:flex; align-items:flex-start; justify-content:space-around; padding-top:9px; z-index:30;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#5E8274" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span style="font-size:9.5px; font-weight:700; color:#5E8274;">홈</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#aeb0a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 22l4-2.4L16 22l-1-8.5"/></svg><span style="font-size:9.5px; font-weight:600; color:#aeb0a6;">자격과정</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#aeb0a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M9 18V6l11-2v12"/></svg><span style="font-size:9.5px; font-weight:600; color:#aeb0a6;">클래스</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#aeb0a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h11a2 2 0 0 1 2 2V21H7a2 2 0 0 1-2-2V4.5z"/><path d="M18 8H8.5"/></svg><span style="font-size:9.5px; font-weight:600; color:#aeb0a6;">교재</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#aeb0a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span style="font-size:9.5px; font-weight:600; color:#aeb0a6;">더보기</span></div>
+      </div>
+      <div style="position:absolute; bottom:7px; left:50%; transform:translateX(-50%); width:132px; height:5px; border-radius:3px; background:rgba(51,71,63,.26); z-index:50;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== C · CLASSES ===================== -->
+<div style="position:absolute; left:1008px; top:1240px; width:384px; font-family:'Pretendard',sans-serif;">
+  <div data-drags-parent="1" style="font-size:12px; font-weight:800; color:#6B6F76; margin-bottom:10px; cursor:grab;">클래스 · Class</div>
+  <div style="width:384px; height:828px; background:#0b0b0d; border-radius:54px; padding:13px; box-shadow:0 30px 70px -28px rgba(51,71,63,.5), 0 1px 0 rgba(255,255,255,.08) inset;">
+    <div style="position:relative; width:358px; height:802px; background:#FAF9F5; border-radius:41px; overflow:hidden;">
+      <div style="position:absolute; top:11px; left:50%; transform:translateX(-50%); width:104px; height:30px; background:#0b0b0d; border-radius:16px; z-index:60;"></div>
+      <div style="position:absolute; top:0; left:0; right:0; height:50px; display:flex; align-items:flex-end; justify-content:space-between; padding:0 24px 9px; z-index:40; color:#33473F;">
+        <span style="font-size:14px; font-weight:700;">9:41</span>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <svg width="17" height="11" viewBox="0 0 17 11" fill="#33473F"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.7" y="5" width="3" height="6" rx="1"/><rect x="9.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="14" y="0" width="3" height="11" rx="1"/></svg>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="#33473F"><path d="M8 2.4c2.6 0 5 1 6.8 2.8l-1.5 1.5C12 5.3 10.1 4.5 8 4.5S4 5.3 2.7 6.7L1.2 5.2C3 3.4 5.4 2.4 8 2.4z"/><path d="M8 6.3c1.5 0 2.9.6 4 1.7l-1.6 1.5C9.9 8.9 9 8.5 8 8.5s-1.9.4-2.4 1L4 8c1.1-1.1 2.5-1.7 4-1.7z"/><circle cx="8" cy="10.5" r="1.3"/></svg>
+          <div style="display:flex; align-items:center; gap:2px;"><div style="width:22px; height:11px; border:1.4px solid #33473F; border-radius:3px; padding:1.4px;"><div style="width:72%; height:100%; background:#33473F; border-radius:1px;"></div></div><div style="width:1.6px; height:4px; background:#33473F; border-radius:1px; opacity:.6;"></div></div>
+        </div>
+      </div>
+      <div style="position:absolute; top:50px; left:0; right:0; bottom:64px; overflow:hidden;">
+        <div style="padding:16px 22px 6px;">
+          <div style="font-size:11.5px; font-weight:600; color:#88A99B; letter-spacing:.16em;">CLASS</div>
+          <h2 style="margin:8px 0 0; font-family:'Gowun Dodum',sans-serif; font-size:25px; line-height:1.3; color:#33473F;">계열별 음악 수업</h2>
+          <p style="margin:8px 0 0; font-size:12.5px; line-height:1.6; color:#9A958B;">기관·연령·회차에 맞춰 악기와 활동을 조합합니다.</p>
+        </div>
+        <div style="margin:14px 22px 16px; display:flex; align-items:center; gap:10px; background:#fff; border:1px solid rgba(51,71,63,.09); border-radius:999px; padding:12px 18px; box-shadow:0 6px 18px rgba(51,71,63,.05);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9A958B" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <span style="font-size:13px; color:#aaa69c; font-weight:500;">악기·수업 검색</span>
+        </div>
+        <div style="display:flex; gap:8px; padding:0 22px 16px; overflow:hidden;">
+          <span style="background:#88A99B; color:#fff; font-size:13px; font-weight:600; padding:8px 15px; border-radius:999px;">전체</span>
+          <span style="background:#fff; border:1px solid rgba(51,71,63,.1); color:#5b6660; font-size:13px; font-weight:500; padding:8px 15px; border-radius:999px;">현악</span>
+          <span style="background:#fff; border:1px solid rgba(51,71,63,.1); color:#5b6660; font-size:13px; font-weight:500; padding:8px 15px; border-radius:999px;">타악</span>
+          <span style="background:#fff; border:1px solid rgba(51,71,63,.1); color:#5b6660; font-size:13px; font-weight:500; padding:8px 15px; border-radius:999px;">난타·전통</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:11px; padding:0 22px;">
+          <div style="display:flex; align-items:center; gap:14px; background:#fff; border:1px solid rgba(51,71,63,.08); border-radius:20px; padding:13px; box-shadow:0 6px 18px rgba(51,71,63,.05);">
+            <div style="width:48px; height:48px; border-radius:15px; background:#EAF1ED; display:flex; align-items:center; justify-content:center; font-size:21px; color:#5E8274;">♪</div>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:600; color:#33473F;">기타</span><span style="display:block; font-size:12px; color:#9A958B; margin-top:2px;">현악 · 코드 반주 입문</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#bcbeb4" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; background:#fff; border:1px solid rgba(51,71,63,.08); border-radius:20px; padding:13px; box-shadow:0 6px 18px rgba(51,71,63,.05);">
+            <div style="width:48px; height:48px; border-radius:15px; background:#EAF1ED; display:flex; align-items:center; justify-content:center; font-size:21px; color:#5E8274;">♫</div>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:600; color:#33473F;">우쿨렐레</span><span style="display:block; font-size:12px; color:#9A958B; margin-top:2px;">현악 · 빠른 성취감</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#bcbeb4" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; background:#fff; border:1px solid rgba(51,71,63,.08); border-radius:20px; padding:13px; box-shadow:0 6px 18px rgba(51,71,63,.05);">
+            <div style="width:48px; height:48px; border-radius:15px; background:#F6EBE0; display:flex; align-items:center; justify-content:center; font-size:21px; color:#C18A5E;">♬</div>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:600; color:#33473F;">미니하프</span><span style="display:block; font-size:12px; color:#9A958B; margin-top:2px;">현악 · 맑은 음색 · 정서 안정</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#bcbeb4" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; background:#fff; border:1px solid rgba(51,71,63,.08); border-radius:20px; padding:13px; box-shadow:0 6px 18px rgba(51,71,63,.05);">
+            <div style="width:48px; height:48px; border-radius:15px; background:#EAF1ED; display:flex; align-items:center; justify-content:center; font-size:21px; color:#5E8274;">♩</div>
+            <span style="flex:1;"><span style="display:block; font-size:15.5px; font-weight:600; color:#33473F;">칼림바</span><span style="display:block; font-size:12px; color:#9A958B; margin-top:2px;">현악 · 누구나 즉시 소리</span></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#bcbeb4" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute; left:0; right:0; bottom:0; height:64px; background:rgba(255,255,255,.92); border-top:1px solid rgba(51,71,63,.08); display:flex; align-items:flex-start; justify-content:space-around; padding-top:9px; z-index:30;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#aeb0a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span style="font-size:9.5px; font-weight:600; color:#aeb0a6;">홈</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#aeb0a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 22l4-2.4L16 22l-1-8.5"/></svg><span style="font-size:9.5px; font-weight:600; color:#aeb0a6;">자격과정</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#5E8274" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M9 18V6l11-2v12"/></svg><span style="font-size:9.5px; font-weight:700; color:#5E8274;">클래스</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#aeb0a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h11a2 2 0 0 1 2 2V21H7a2 2 0 0 1-2-2V4.5z"/><path d="M18 8H8.5"/></svg><span style="font-size:9.5px; font-weight:600; color:#aeb0a6;">교재</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; width:60px;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#aeb0a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span style="font-size:9.5px; font-weight:600; color:#aeb0a6;">더보기</span></div>
+      </div>
+      <div style="position:absolute; bottom:7px; left:50%; transform:translateX(-50%); width:132px; height:5px; border-radius:3px; background:rgba(51,71,63,.26); z-index:50;"></div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
